@@ -16,3 +16,6 @@ x AdminUser -> STI
 
 ## UI:
 - Bootstrap -> formatting
+
+## TODO:
+- Refactor user association integration test in post_spec
