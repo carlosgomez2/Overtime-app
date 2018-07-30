@@ -9,6 +9,9 @@
   <li class="nav-item">
     <a href="/posts" class="nav-link <%= active?(posts_path) %>">Time Entries</a>
   </li>
+  <li class="nav-item">
+    <a href="/posts/new" class="nav-link <%= active?(new_post_path) %>", id="new_post_from_nav">New Entry</a>
+  </li>
   <li class="nav-item dropdown ml-md-auto">
     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Account</a>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
