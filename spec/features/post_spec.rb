@@ -30,7 +30,16 @@ describe 'navigate' do
   describe 'new' do
     it 'has a link from the homepage' do
       visit root_path
-      click_link("new_post_from_nav")
+      click_link('new_post_from_nav')
+      expect(page.status_code).to eq(200)
+    end
+  end
+
+  describe 'delete' do
+    it 'can be deleted' do
+      @post = FactoryBot.create(:post)
+      visit posts_path
+      click_link("delete_post_#{@post.id}_from_index")
       expect(page.status_code).to eq(200)
     end
   end
@@ -46,16 +55,16 @@ describe 'navigate' do
 
     it 'can be created from form page' do
       fill_in 'post[date]', with: Date.today
-      fill_in 'post[rationale]', with: "Some rationale"
-      click_on "Save"
-      expect(page).to have_content("Some rationale")
+      fill_in 'post[rationale]', with: 'Some rationale'
+      click_on 'Save'
+      expect(page).to have_content('Some rationale')
     end
 
     it 'will have the user associated it' do
       fill_in 'post[date]', with: Date.today
-      fill_in 'post[rationale]', with: "User Association"
-      click_on "Save"
-      expect(User.last.posts.last.rationale).to eq("User Association")
+      fill_in 'post[rationale]', with: 'User Association'
+      click_on 'Save'
+      expect(User.last.posts.last.rationale).to eq('User Association')
     end
   end
 
@@ -73,9 +82,9 @@ describe 'navigate' do
     it 'can be edited' do
       visit edit_post_path(@post)
       fill_in 'post[date]', with: Date.today
-      fill_in 'post[rationale]', with: "Edited content"
-      click_on "Save"
-      expect(page).to have_content("Edited content")
+      fill_in 'post[rationale]', with: 'Edited content'
+      click_on 'Save'
+      expect(page).to have_content('Edited content')
     end
   end
 end
