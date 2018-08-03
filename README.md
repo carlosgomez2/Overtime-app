@@ -17,7 +17,7 @@ Key requirement: company needs documentation that salaried employees did or did 
 ## UI:
 - [x] Bootstrap -> formatting
 - [] Font Awesome Icons
-- [] Update styles for forms
+- [x] Update styles for forms
 
 ## TODO:
 - [x] Add full_name methods for users
