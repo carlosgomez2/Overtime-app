@@ -19,6 +19,7 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'gritter', '~> 1.2'
 gem "administrate"
 gem "bourbon"
+gem 'administrate-field-password'
 
 group :development, :test do
   gem 'byebug', platform: :mri
