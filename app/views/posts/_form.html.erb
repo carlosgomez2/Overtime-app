@@ -10,8 +10,20 @@
     <%= f.date_field :date, class: "form-control form-control-lg" %>
   </div>
   <div class="form-group">  
-    <%= f.label :post %>
+    <%= f.label :rationale %>
     <%= f.text_area :rationale, class: "form-control form-control-lg" %>
+  </div>
+  <div class="form-group form-check">
+    <%= f.radio_button :status, 'submitted', class: "form-check-input" %>
+    <%= f.label :status, 'Submitted', class: "form-check-label" %>
+  </div>
+  <div class="form-group form-check">
+    <%= f.radio_button :status, 'approved', class: "form-check-input" %>
+    <%= f.label :status, 'Approved', class: "form-check-label" %>
+  </div>
+  <div class="form-group form-check">
+    <%= f.radio_button :status, 'rejected', class: "form-check-input" %>
+    <%= f.label :status, 'Rejected', class: "form-check-label" %>
   </div>
   <%= f.submit 'Save', class: "btn btn-primary btn-block" %>
 <% end %>
