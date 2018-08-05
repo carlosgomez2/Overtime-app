@@ -10,7 +10,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     posts: Field::HasMany,
     id: Field::Number,
-    email: Field::String,
+    email: Field::String.with_options(searchable: true),
     password: Field::Password,
     encrypted_password: Field::String,
     reset_password_token: Field::String,
@@ -21,8 +21,8 @@ class AdminUserDashboard < Administrate::BaseDashboard
     last_sign_in_at: Field::DateTime,
     current_sign_in_ip: Field::String.with_options(searchable: false),
     last_sign_in_ip: Field::String.with_options(searchable: false),
-    first_name: Field::String,
-    last_name: Field::String,
+    first_name: Field::String.with_options(searchable: true),
+    last_name: Field::String.with_options(searchable: true),
     type: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -34,7 +34,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
+    # :id,
     :email,
     :posts,
     :type,
