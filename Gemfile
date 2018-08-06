@@ -20,6 +20,7 @@ gem 'gritter', '~> 1.2'
 gem "administrate"
 gem "bourbon"
 gem 'administrate-field-password'
+gem "pundit"
 
 group :development, :test do
   gem 'byebug', platform: :mri
