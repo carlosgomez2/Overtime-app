@@ -13,17 +13,6 @@
     <%= f.label :rationale %>
     <%= f.text_area :rationale, class: "form-control form-control-lg" %>
   </div>
-  <div class="form-group form-check">
-    <%= f.radio_button :status, 'submitted', class: "form-check-input" %>
-    <%= f.label :status, 'Submitted', class: "form-check-label" %>
-  </div>
-  <div class="form-group form-check">
-    <%= f.radio_button :status, 'approved', class: "form-check-input" %>
-    <%= f.label :status, 'Approved', class: "form-check-label" %>
-  </div>
-  <div class="form-group form-check">
-    <%= f.radio_button :status, 'rejected', class: "form-check-input" %>
-    <%= f.label :status, 'Rejected', class: "form-check-label" %>
-  </div>
+  <%= render partial: 'status', locals: {f: f} if current_user.type == 'AdminUser' %>
   <%= f.submit 'Save', class: "btn btn-primary btn-block" %>
 <% end %>
