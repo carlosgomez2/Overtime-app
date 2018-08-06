@@ -24,3 +24,4 @@ Key requirement: company needs documentation that salaried employees did or did 
 - [x] Add full_name methods for users
 - [] Refactor user association integration test in post_spec
 - [] Refactor posts/_form for admin user status
+- [] Fix post_spec.rb:82 to use factories
