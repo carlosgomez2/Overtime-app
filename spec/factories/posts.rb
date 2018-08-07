@@ -10,4 +10,10 @@ FactoryBot.define do
     rationale "Random rationale"
     association :user
   end
+
+  factory :post_from_non_authorized_user, class: Post do
+    date Date.yesterday
+    rationale "Random rationale"
+    association :non_authorized_user
+  end
 end

@@ -20,10 +20,19 @@ describe 'navigate' do
     end
 
     it 'has a list of posts' do
-      post1 = FactoryBot.create(:post)
-      post2 = FactoryBot.create(:second_post)
+      post1 = FactoryBot.create(:post, user: @user)
+      post2 = FactoryBot.create(:second_post, user: @user)
       visit posts_path
-      expect(page).to have_content(/rationale|Random/)
+      expect(page).to have_content(/Random|rationale/)
+    end
+
+    it 'has a scope, only post creators can see their posts' do
+      post1 = FactoryBot.create(:post, user: @user)
+      post2 = FactoryBot.create(:second_post, user: @user)
+      other_user = FactoryBot.create(:other_user)
+      post_from_other_user = Post.create(date: Date.today, rationale: 'This post should not be seen', user_id: other_user.id)
+      visit posts_path
+      expect(page).to_not have_content(/This post should not be seen/)
     end
   end
 
@@ -37,7 +46,7 @@ describe 'navigate' do
 
   describe 'delete' do
     it 'can be deleted' do
-      @post = FactoryBot.create(:post)
+      @post = FactoryBot.create(:post, user: @user)
       visit posts_path
       click_link("delete_post_#{@post.id}_from_index")
       expect(page.status_code).to eq(200)
@@ -70,9 +79,9 @@ describe 'navigate' do
 
   describe 'edit' do
     before do
-      @edit_user = User.create(first_name: "test", last_name: "user", email: "some@email.com", password: "password", password_confirmation: "password")
+      @edit_user = User.create(first_name: 'test', last_name: 'user', email: 'some@email.com', password: 'password', password_confirmation: 'password')
       login_as(@edit_user, scope: :user)
-      @edit_post = Post.create(date: Date.today, rationale: "asdfg", user_id: @edit_user.id)
+      @edit_post = Post.create(date: Date.today, rationale: 'asdfg', user_id: @edit_user.id)
     end
 
     it 'can be edited' do
