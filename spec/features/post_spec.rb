@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'navigate' do
   let (:user) { FactoryBot.create(:user) }
   let (:post) do
-    Post.create(date: Date.today, rationale: "Rationale", user_id: user.id)
+    Post.create(date: Date.today, rationale: "Rationale", user_id: user.id, overtime_request: 3.5)
   end
 
   before do
@@ -34,7 +34,7 @@ describe 'navigate' do
       post1 = FactoryBot.create(:post, user: user)
       post2 = FactoryBot.create(:second_post, user: user)
       other_user = FactoryBot.create(:other_user)
-      post_from_other_user = Post.create(date: Date.today, rationale: 'This post should not be seen', user_id: other_user.id)
+      post_from_other_user = Post.create(date: Date.today, rationale: 'This post should not be seen', user_id: other_user.id, overtime_request: 1.5)
       visit posts_path
       expect(page).to_not have_content(/This post should not be seen/)
     end
@@ -62,20 +62,21 @@ describe 'navigate' do
       visit new_post_path
     end
 
-    it 'has a form that can be reached' do
+    it 'has a new form that can be reached' do
       expect(page.status_code).to eq(200)
     end
 
-    it 'can be created from form page' do
+    it 'can be created from new form page' do
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: 'Some rationale'
-      click_on 'Save'
-      expect(page).to have_content('Some rationale')
+      fill_in 'post[overtime_request]', with: 4.5
+      expect { click_on 'Save' }.to change(Post, :count).by(1)
     end
 
     it 'will have the user associated it' do
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: 'User Association'
+      fill_in 'post[overtime_request]', with: 4.5
       click_on 'Save'
       expect(User.last.posts.last.rationale).to eq('User Association')
     end
