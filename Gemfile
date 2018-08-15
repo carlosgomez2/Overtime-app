@@ -17,11 +17,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'bootstrap', '~> 4.1.3'
 gem 'gritter', '~> 1.2'
-gem "administrate"
-gem "bourbon"
+gem 'administrate'
+gem 'bourbon'
 gem 'administrate-field-password'
-gem "pundit"
+gem 'pundit'
 gem 'glyphicons'
+gem 'twilio-ruby', '~> 5.12.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
