@@ -21,6 +21,7 @@ gem "administrate"
 gem "bourbon"
 gem 'administrate-field-password'
 gem "pundit"
+gem 'glyphicons'
 
 group :development, :test do
   gem 'byebug', platform: :mri
