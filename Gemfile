@@ -22,7 +22,8 @@ gem 'bourbon'
 gem 'administrate-field-password'
 gem 'pundit'
 gem 'glyphicons'
-gem 'twilio-ruby', '~> 5.12.1'
+# gem 'twilio-ruby', '~> 5.12.1'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platform: :mri
