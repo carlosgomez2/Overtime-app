@@ -7,7 +7,7 @@ AdminUser.create(email: "admin@gmail.com", password: "adminpassword", password_c
 puts "1 Admin User created"
 
 100.times do |posts|
-  Post.create!(date: Date.today, rationale: "#{posts} rationale content", user_id: @user.id, overtime_request: 2.5)
+  Post.create!(date: Date.today, rationale: "Pour-over XOXO swag post-ironic cray snackwave PBR&B hammock iPhone fashion axe fanny pack jean shorts knausgaard. Before they sold out snackwave vape, food truck cold-pressed salvia authentic meh. Hot chicken next level before they sold out kogi helvetica cardigan single-origin coffee shaman af godard chicharrones adaptogen tumeric vaporware. YOLO butcher shoreditch pabst vexillologist. Man braid shaman organic lomo.", user_id: @user.id, overtime_request: 2.5)
 end
 
 100.times do |audit_log|

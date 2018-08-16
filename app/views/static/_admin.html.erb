@@ -1,1 +1,16 @@
-<h1>Hi! Admin</h1>
+<div class="container-fluid">
+  <div class="pending-homepage">
+    <h2 class="text-center">Items Pending Your Approval</h2>
+    <hr />
+    <div class="row">
+      <%= render partial: 'pending_approval', locals: { pending_approvals: @pending_approvals } %>
+    </div>
+  </div>
+  
+  <div class="pending-homepage">
+    <h2>hola</h2>
+    <div class="row">
+      <p>hola</p>
+    </div>
+  </div>
+</div>
