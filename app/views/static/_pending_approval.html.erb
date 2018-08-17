@@ -1,24 +1,25 @@
 <% pending_approvals.each do |pending_approval| %>
-  <div class="homepage-block col-xs-12 col-xl-3 bg-primary rounded">
-    <h5>
-      <%= pending_approval.user.full_name %>
-    </h5>
-    <hr style="border-top: 1px solid rgba(255, 255, 255, 0.801);">
-    <p class="pending-details">
-      Date Submitted:
-      <%= pending_approval.date %>
-    </p>
-    <p class="pending-details">
-      Rationale:
-      <%= truncate(pending_approval.rationale, length: 52) %>
-    </p>
-    <hr style="border-top: 1px solid rgba(255, 255, 255, 0.801);">
-    <div class="row">
-      <div class="col-md-6 column">
-        <%= link_to 'Approve', approve_post_path(pending_approval), class: "btn btn-success btn-block", id: "approve_#{pending_approval.id}" %>
-      </div>
-      <div class="col-md-6 column">
-        <%= link_to 'Review', edit_post_path(pending_approval), class: "btn btn-secondary btn-block" %>
+  <div class="col-xs-12 col-xl-4">
+    <div class="card text-white bg-primary">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= pending_approval.user.full_name %>
+        </h5>
+        <hr style="border-top: 1px solid rgba(255, 255, 255, 0.801);">
+        <p class="card-text">Date Submitted:
+          <%= pending_approval.date %>
+        </p>
+        <p class="card-text">Rationale:
+          <%= truncate(pending_approval.rationale, length: 52) %>
+        </p>
+        <div class="row">
+          <div class="col-md-6 column">
+            <%= link_to 'Approve', approve_post_path(pending_approval), class: "btn btn-success btn-block", id: "approve_#{pending_approval.id}" %>
+          </div>
+          <div class="col-md-6 column">
+            <%= link_to 'Review', edit_post_path(pending_approval), class: "btn btn-warning btn-block" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -8,9 +8,12 @@
   </div>
   
   <div class="pending-homepage">
-    <h2>hola</h2>
+    <h2 class="text-center">Confirmation Log</h2>
+    <hr />
     <div class="row">
-      <p>hola</p>
+      <%= render partial: 'confirmation_log', locals: { recent_audit_items: @recent_audit_items } %>
     </div>
+    <hr />
+    <%= link_to 'View All Items', audit_logs_path, class: "btn btn-primary btn-block" %>
   </div>
 </div>

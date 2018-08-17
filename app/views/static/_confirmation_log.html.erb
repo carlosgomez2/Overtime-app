@@ -1,0 +1,16 @@
+<% recent_audit_items.each do |recent_audit_item| %>
+  <div class="col-xs-12 col-xl-4">
+    <div class="card text-white bg-dark">
+      <div class="card-header text-right">
+        Status: <%= status_label recent_audit_item.status %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= recent_audit_item.user.full_name %></h5>
+        <p class="card-text">Week starting on:
+        <%= recent_audit_item.start_date %></p>
+        <p class="card-text">Confirmed at:
+        <%= recent_audit_item.end_date || status_label("pending") %></p>      
+      </div>
+    </div>
+  </div>
+<% end %>
