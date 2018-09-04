@@ -13,8 +13,11 @@ Key requirement: company needs documentation that salaried employees did or did 
 - [-] SMS Sending -> link to approval or overtime input
 - [x] Administrative admin dashboard
 - [x] Block non admin and guest users
-- [] Email summary to managers for approval
+- [x] Email summary to managers for approval
 - [x] Needs to be documented if employee did not log overtime
+- [x] Create audit log for each text message
+- [] Implement Honeybadger error reporting
+- [] Implement New Relic for keeping the site alive
 
 ## UI:
 - [x] Bootstrap -> formatting
@@ -22,4 +25,11 @@ Key requirement: company needs documentation that salaried employees did or did 
 - [x] Update styles for forms
 
 ## TODO:
-- [x] Refactor posts/_form for admin user status
+- [x] Refactor posts/form for admin user status
+- [] Need update audit log status when an overtime item has been rejected
+- [] Update buttons on employee homepage
+- [] Update buttons to include span tag
+- [] Update button sort order on employee homepage
+- [] Remove unnecessary buttons for managers
+- [] Fix dashboard bug
+- [] Need to update end_date when confirmed
