@@ -16,7 +16,7 @@ Key requirement: company needs documentation that salaried employees did or did 
 - [x] Email summary to managers for approval
 - [x] Needs to be documented if employee did not log overtime
 - [x] Create audit log for each text message
-- [] Implement Honeybadger error reporting
+- [-] Implement Honeybadger error reporting
 - [] Implement New Relic for keeping the site alive
 
 ## UI:
@@ -30,7 +30,7 @@ Key requirement: company needs documentation that salaried employees did or did 
 - [x] Update buttons on employee homepage
 - [x] Update buttons to include span tag
 - [x] Update button sort order on employee homepage
-- [] Remove unnecessary buttons for managers
+- [x] Remove unnecessary buttons for managers
 - [] Fix dashboard bug
 - [x] Need to update end_date when confirmed
 - [] Data issue verify track hours
