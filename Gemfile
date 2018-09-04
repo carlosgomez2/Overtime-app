@@ -24,6 +24,7 @@ gem 'pundit'
 gem 'glyphicons'
 # gem 'twilio-ruby', '~> 5.12.1'
 gem 'kaminari'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -40,5 +41,3 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
