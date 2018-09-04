@@ -33,3 +33,4 @@ Key requirement: company needs documentation that salaried employees did or did 
 - [] Remove unnecessary buttons for managers
 - [] Fix dashboard bug
 - [x] Need to update end_date when confirmed
+- [] Data issue verify track hours
