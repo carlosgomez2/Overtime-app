@@ -26,10 +26,10 @@ Key requirement: company needs documentation that salaried employees did or did 
 
 ## TODO:
 - [x] Refactor posts/form for admin user status
-- [] Need update audit log status when an overtime item has been rejected
-- [] Update buttons on employee homepage
-- [] Update buttons to include span tag
-- [] Update button sort order on employee homepage
+- [x] Need update audit log status when an overtime item has been rejected
+- [x] Update buttons on employee homepage
+- [x] Update buttons to include span tag
+- [x] Update button sort order on employee homepage
 - [] Remove unnecessary buttons for managers
 - [] Fix dashboard bug
 - [x] Need to update end_date when confirmed
