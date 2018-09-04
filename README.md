@@ -32,4 +32,4 @@ Key requirement: company needs documentation that salaried employees did or did 
 - [] Update button sort order on employee homepage
 - [] Remove unnecessary buttons for managers
 - [] Fix dashboard bug
-- [] Need to update end_date when confirmed
+- [x] Need to update end_date when confirmed
