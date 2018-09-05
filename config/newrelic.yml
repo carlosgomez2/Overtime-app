@@ -13,11 +13,11 @@
 common: &default_settings
   # Required license key associated with your New Relic account.
 
-license_key: <%= ENV["NEW_RELIC"] %>
+license_key: <%= ENV["NEW_RELIC_LICENSE_KEY"] %>
 
   # Your application name. Renaming here affects where data displays in New
   # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications
-  app_name: Overtime-app
+  app_name: My Application
 
   # To disable the agent regardless of other settings, uncomment the following:
   # agent_enabled: false
@@ -31,7 +31,7 @@ license_key: <%= ENV["NEW_RELIC"] %>
 # If your application has other named environments, configure them here.
 development:
   <<: *default_settings
-  app_name: Overtime-app (Development)
+  app_name: My Application (Development)
 
 test:
   <<: *default_settings
@@ -40,7 +40,7 @@ test:
 
 staging:
   <<: *default_settings
-  app_name: Overtime-app (Staging)
+  app_name: My Application (Staging)
 
 production:
   <<: *default_settings
