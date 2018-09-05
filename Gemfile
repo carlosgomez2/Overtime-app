@@ -25,6 +25,7 @@ gem 'glyphicons'
 # gem 'twilio-ruby', '~> 5.12.1'
 gem 'kaminari'
 gem 'newrelic_rpm'
+gem 'rollbar'
 
 group :development, :test do
   gem 'byebug', platform: :mri

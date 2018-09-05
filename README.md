@@ -17,6 +17,7 @@ Key requirement: company needs documentation that salaried employees did or did 
 - [x] Needs to be documented if employee did not log overtime
 - [x] Create audit log for each text message
 - [-] Implement Honeybadger error reporting (Honybadger pay)
+- [] Implement Rollbar instead Honeybadger
 - [x] Implement New Relic for keeping the site alive
 
 ## UI:
