@@ -10,14 +10,14 @@ Key requirement: company needs documentation that salaried employees did or did 
 
 ## Features:
 - [x] Approval Workflow
-- [-] SMS Sending -> link to approval or overtime input
+- [-] SMS Sending -> link to approval or overtime input (Twilio pay)
 - [x] Administrative admin dashboard
 - [x] Block non admin and guest users
 - [x] Email summary to managers for approval
 - [x] Needs to be documented if employee did not log overtime
 - [x] Create audit log for each text message
-- [-] Implement Honeybadger error reporting
-- [] Implement New Relic for keeping the site alive
+- [-] Implement Honeybadger error reporting (Honybadger pay)
+- [x] Implement New Relic for keeping the site alive
 
 ## UI:
 - [x] Bootstrap -> formatting
@@ -31,6 +31,4 @@ Key requirement: company needs documentation that salaried employees did or did 
 - [x] Update buttons to include span tag
 - [x] Update button sort order on employee homepage
 - [x] Remove unnecessary buttons for managers
-- [] Fix dashboard bug
 - [x] Need to update end_date when confirmed
-- [] Data issue verify track hours
