@@ -2,6 +2,23 @@
 
 Key requirement: company needs documentation that salaried employees did or did not get overtime each week.
 
+## Screenshots
+
+![](frame-admin-dashboard-review.png)
+
+![](frame-admin-audit-log.png)
+
+![](frame-admin-review.png)
+
+![](frame-admin-dashboard.png)
+
+![](frame-edit-entrie.png)
+
+![](frame-entries.png)
+
+![](frame-dashboard.png)
+
+
 ## Models
 - [x] Post -> date:date rationale:text
 - [x] User -> Devise
